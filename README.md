@@ -50,11 +50,6 @@ Implement a movie recommendation system using the k-Nearest Neighbors algorithm.
     Tkinter (for GUI)
     Surprise (for collaborative filtering)
 
-## Install dependencies using the following command:
-
-bash
-
-pip install -r requirements.txt
 
 ## Contributing
 
