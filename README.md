@@ -21,6 +21,23 @@ The goal of this project is to provide users with movie recommendations based on
 
 Explore the dataset to gain insights into movie ratings, scores, genres, and other relevant information. Visualizations are included to provide a better understanding of the data distribution.
 
+### Distribution of Ratings
+
+```python
+# Set the style for seaborn
+sns.set(style="whitegrid")
+
+# Distribution of Ratings
+plt.figure(figsize=(12, 6))
+sns.countplot(x='rating', data=data, order=data['rating'].value_counts().index, palette='viridis')
+plt.title('Distribution of Ratings')
+plt.xlabel('Rating')
+plt.ylabel('Count')
+plt.show()
+```
+
+
+
 ## Data Cleaning
 
 Handle missing values, outliers, and perform necessary data cleaning procedures to ensure the accuracy and reliability of the recommendation system.
