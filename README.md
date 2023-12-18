@@ -36,10 +36,55 @@ plt.ylabel('Count')
 plt.show()
 ```
 
+### Distribution of Score
 
+```python
+plt.figure(figsize=(12, 6))
+sns.histplot(data['score'].dropna(), kde=True, color='skyblue')
+plt.title('Distribution of Scores')
+plt.xlabel('Score')
+plt.ylabel('Count')
+plt.show()
+```
+### Distribution of Genres
 
+```python
+plt.figure(figsize=(14, 8))
+sns.countplot(y='genre', data=data, order=data['genre'].value_counts().index, palette='muted')
+plt.title('Distribution of Genres')
+plt.xlabel('Count')
+plt.ylabel('Genre')
+plt.show()
+```
+### Distribution of Country
+
+```python
+plt.figure(figsize=(14, 12))
+sns.countplot(y='country', data=data, order=data['country'].value_counts().index, palette='pastel')
+plt.title('Distribution of Countries')
+plt.xlabel('Count')
+plt.ylabel('Country')
+plt.show()
+```
+### Correlation Matrix
+
+```python
+correlation_matrix = data.corr()
+plt.figure(figsize=(12, 8))
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt='.2f', linewidths=0.5)
+plt.title('Correlation Matrix')
+plt.show()
+```
+### Budget vs. Gross Relationship
+```python
+plt.figure(figsize=(10, 6))
+sns.scatterplot(x='budget', y='gross', data=data, color='purple', alpha=0.7)
+plt.title('Budget vs. Gross Earnings')
+plt.xlabel('Budget')
+plt.ylabel('Gross Earnings')
+plt.show()
+```
 ## Data Cleaning
-
 Handle missing values, outliers, and perform necessary data cleaning procedures to ensure the accuracy and reliability of the recommendation system.
 
 ## Statistic Analysis
