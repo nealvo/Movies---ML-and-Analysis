@@ -12,7 +12,6 @@ Contents
     Usage
     Dependencies
     Contributing
-    License
 
 ## Introduction
 
